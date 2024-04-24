@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Unity Scene</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Upload Unity Scene</h1>
+    </header>
+
+    <main>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="sceneFile">Choose Unity Scene File:</label>
+            <input type="file" id="sceneFile" name="sceneFile" accept=".unity">
+            <div id="error-message" class="error-message"></div>
+            <div id="success-message" class="success-message"></div>
+            <button type="submit">Upload</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

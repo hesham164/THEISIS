@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "packages": {
+    "com.microsoft.mixedreality.openxr": {
+      "tarball": {
+        "hash": "36f977845fc0",
+        "mtime": 1713461772425,
+        "size": 10562125,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\com.microsoft.mixedreality.openxr-1.10.1.tgz"
+      }
+    },
+    "com.microsoft.mrtk.graphicstools.unity": {
+      "tarball": {
+        "hash": "770ae1f34e33",
+        "mtime": 1700237995770,
+        "size": 16285388,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\com.microsoft.mrtk.graphicstools.unity-0.5.12.tgz"
+      }
+    },
+    "com.microsoft.spatialaudio.spatializer.unity": {
+      "tarball": {
+        "hash": "fdb3fe4bc947",
+        "mtime": 1713461804534,
+        "size": 83146418,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\com.microsoft.spatialaudio.spatializer.unity-2.0.55.tgz"
+      }
+    },
+    "org.mixedrealitytoolkit.core": {
+      "tarball": {
+        "hash": "f006db6463bb",
+        "mtime": 1713461761075,
+        "size": 134812,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\org.mixedrealitytoolkit.core-3.2.0.tgz"
+      }
+    },
+    "org.mixedrealitytoolkit.input": {
+      "tarball": {
+        "hash": "6785b215823f",
+        "mtime": 1713461764482,
+        "size": 2817475,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\org.mixedrealitytoolkit.input-3.2.0.tgz"
+      }
+    },
+    "org.mixedrealitytoolkit.spatialmanipulation": {
+      "tarball": {
+        "hash": "7e88bb47473f",
+        "mtime": 1700237986449,
+        "size": 160441,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\org.mixedrealitytoolkit.spatialmanipulation-3.0.0.tgz"
+      }
+    },
+    "org.mixedrealitytoolkit.standardassets": {
+      "tarball": {
+        "hash": "30664ff4df7a",
+        "mtime": 1713461761890,
+        "size": 4261759,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\org.mixedrealitytoolkit.standardassets-3.1.0.tgz"
+      }
+    },
+    "org.mixedrealitytoolkit.uxcomponents": {
+      "tarball": {
+        "hash": "f707933cdf29",
+        "mtime": 1713461761493,
+        "size": 159394,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\org.mixedrealitytoolkit.uxcomponents-3.2.0.tgz"
+      }
+    },
+    "org.mixedrealitytoolkit.uxcomponents.noncanvas": {
+      "tarball": {
+        "hash": "168fff74c24e",
+        "mtime": 1713989245956,
+        "size": 102281,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\org.mixedrealitytoolkit.uxcomponents.noncanvas-3.1.2.tgz"
+      }
+    },
+    "org.mixedrealitytoolkit.uxcore": {
+      "tarball": {
+        "hash": "fc881d722d9c",
+        "mtime": 1713461761129,
+        "size": 108957,
+        "localPath": "C:\\Users\\hesha\\Videos\\T_Project\\thesis\\Packages\\MixedReality\\org.mixedrealitytoolkit.uxcore-3.2.0.tgz"
+      }
+    }
+  }
+}
