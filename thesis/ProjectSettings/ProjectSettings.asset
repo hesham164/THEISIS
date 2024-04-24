@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 2e6409fa65d574f41b78156cac1a9328
+  productGUID: c04220d52fa5cbf4aaa5ed143e78e0b4
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -47,7 +47,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 1
+  m_ActiveColorSpace: 0
   unsupportedMSAAFallback: 0
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
@@ -78,7 +78,7 @@ PlayerSettings:
   androidFullscreenMode: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -641,10 +641,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
-  scriptingDefineSymbols:
-    Android: USE_INPUT_SYSTEM_POSE_CONTROL
-    Standalone: USE_INPUT_SYSTEM_POSE_CONTROL
-    Windows Store Apps: USE_INPUT_SYSTEM_POSE_CONTROL
+  scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -750,12 +747,12 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 2
+  activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 524496b3-e0ed-48ed-8f58-844b91717f44
+  cloudProjectId: 6d8d48ad-c06a-45eb-9f3b-c25c716b3053
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: thesis
+  projectName: thesis 2024-04-25_00-00-40
   organizationId: heshameltohamy2-gmail-com
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
