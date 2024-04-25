@@ -9,11 +9,14 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: TickMarks_SolidBlue_0380FD
   m_Shader: {fileID: 4800000, guid: c331f6c43a2ef0945864cb668f2653c9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHABLEND_ON
   - _DISABLE_ALBEDO_MAP
   - _ROUND_CORNERS
   - _SPECULAR_HIGHLIGHTS
+  - _USE_WORLD_SCALE
   m_InvalidKeywords:
   - _BLOB_ENABLE_2__ON
   - _BLOB_ENABLE__ON
@@ -28,6 +31,7 @@ Material:
   stringTagMap:
     RenderType: Fade
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -60,6 +64,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -131,6 +139,10 @@ Material:
     - _Blob_Near_Size_2_: 0.01
     - _Blob_Pulse_: 0
     - _Blob_Pulse_2_: 0
+    - _BlurBorderIntensity: 0
+    - _BlurMode: 0
+    - _BlurTextureIntensity: 1
+    - _BorderColorMode: 0
     - _BorderLight: 0
     - _BorderLightOpaque: 0
     - _BorderLightOpaqueAlpha: 1
@@ -154,6 +166,8 @@ Material:
     - _DetailNormalMapScale: 1
     - _DirectionalLight: 0
     - _DstBlend: 10
+    - _DstBlendAlpha: 1
+    - _EdgeSmoothingMode: 0
     - _EdgeSmoothingValue: 0.002
     - _Edge_Reflect_: 0.526
     - _Edge_Width_: 0.04
@@ -163,12 +177,15 @@ Material:
     - _EnableLocalSpaceTriplanarMapping: 0
     - _EnableNormalMap: 0
     - _EnableProximityLightColorOverride: 0
+    - _EnableSSAA: 0
+    - _EnableStencil: 0
     - _EnableTriplanarMapping: 0
     - _Enable_Fade_: 1
     - _Env_Enable_: 0
     - _EnvironmentColorIntensity: 0.5
     - _EnvironmentColorThreshold: 1.5
     - _EnvironmentColoring: 0
+    - _Fade: 1
     - _FadeBeginDistance: 0.85
     - _FadeCompleteDistance: 0.5
     - _FadeMinValue: 0
@@ -181,6 +198,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _GradientAngle: 180
+    - _GradientMode: 0
     - _Highlight_Width_: 1
     - _Horizon_Power_: 1
     - _HoverLight: 0
@@ -202,7 +221,9 @@ Material:
     - _Line_Width_: 0.092
     - _Metallic: 0
     - _Min_Fuzz_: 0.001
+    - _MipmapBias: -2
     - _Mode: 2
+    - _NPR: 0
     - _NearLightFade: 0
     - _NearPlaneFade: 0
     - _NormalMapScale: 1
@@ -237,6 +258,7 @@ Material:
     - _RoundCornerMargin: 0.01
     - _RoundCornerRadius: 0.5
     - _RoundCorners: 1
+    - _RoundCornersHideInterior: 0
     - _SSS_Distance_: 0.0025
     - _Saturation_Shift_: 0
     - _Selected_: 0
@@ -257,19 +279,24 @@ Material:
     - _Specular_: 2.14
     - _SphericalHarmonics: 0
     - _SrcBlend: 5
+    - _SrcBlendAlpha: 1
     - _Stencil: 0
     - _StencilComparison: 0
     - _StencilOperation: 0
+    - _StencilReadMask: 255
     - _StencilReference: 0
+    - _StencilWriteMask: 255
     - _Subsurface_: 1
     - _Sun_Intensity_: 1.206
     - _Sun_Phi_: 0.449
     - _Sun_Theta_: 0.449
     - _TriplanarMappingBlendSharpness: 4
     - _UVSec: 0
+    - _UseWorldScale: 1
     - _Value_Shift_: 0
     - _VertexColors: 0
     - _VertexExtrusion: 0
+    - _VertexExtrusionConstantWidth: 0
     - _VertexExtrusionSmoothNormals: 0
     - _VertexExtrusionValue: 0
     - _Width_: 0.02
@@ -283,6 +310,8 @@ Material:
     - _Base_Color_: {r: 0, g: 0.50196075, b: 1, a: 1}
     - _Blob_Position_: {r: 0, g: 0, b: 0.1, a: 1}
     - _Blob_Position_2_: {r: 0, g: 0, b: 0.1, a: 1}
+    - _BlurBackgroundRect: {r: 0, g: 0, b: 1, a: 1}
+    - _BorderColor: {r: 1, g: 1, b: 1, a: 0}
     - _Box_Center_: {r: 0, g: 0, b: 0, a: 1}
     - _Box_Size_: {r: 1, g: 1, b: 0.1, a: 1}
     - _ClippingBorderColor: {r: 1, g: 0.2, b: 0, a: 1}
@@ -294,6 +323,13 @@ Material:
     - _EnvironmentColorX: {r: 1, g: 0, b: 0, a: 1}
     - _EnvironmentColorY: {r: 0, g: 1, b: 0, a: 1}
     - _EnvironmentColorZ: {r: 0, g: 0, b: 1, a: 1}
+    - _GradientAlpha: {r: 1, g: 1, b: 1, a: 1}
+    - _GradientAlphaTime: {r: 0, g: 0, b: 0, a: 0}
+    - _GradientColor0: {r: 0.631373, g: 0.631373, b: 0.631373, a: 0}
+    - _GradientColor1: {r: 1, g: 0.690196, b: 0.976471, a: 0.25}
+    - _GradientColor2: {r: 0, g: 0.32999998, b: 0.88, a: 0.5}
+    - _GradientColor3: {r: 0, g: 0.32999998, b: 0.88, a: 1}
+    - _GradientColor4: {r: 1, g: 1, b: 1, a: 1}
     - _Ground_Color_: {r: 0.4, g: 0.415686, b: 0.501961, a: 1}
     - _Highlight_Color_: {r: 0.011764706, g: 0.5019608, b: 0.99215686, a: 1}
     - _Highlight_Transform_: {r: 1, g: 1, b: 0, a: 0}

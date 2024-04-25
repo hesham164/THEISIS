@@ -1,82 +1,77 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class SpellingGame : MonoBehaviour
 {
-    [System.Serializable]
-    public class ButtonPlate
-    {
-        public Transform parent;
-        public List<Button> correctAnswers;
-        public List<Button> incorrectAnswers;
-    }
+    [SerializeField] private Transform[] buttonPlates;
+    [SerializeField] private Transform[] correctButtons;
+    [SerializeField] private Transform[] incorrectButtons;
 
-    public List<ButtonPlate> buttonPlates;
+    private int currentButtonPlateIndex = 0;
 
     private void Start()
     {
-        foreach (var plate in buttonPlates)
+        // Initialize buttons on the first button plate
+        InitializeButtons(buttonPlates[currentButtonPlateIndex], correctButtons);
+        InitializeButtons(buttonPlates[currentButtonPlateIndex], incorrectButtons);
+
+        // Activate the first button plate and deactivate others
+        for (int i = 0; i < buttonPlates.Length; i++)
         {
-            CreateButtonPlate(plate.parent, plate.correctAnswers, plate.incorrectAnswers);
+            buttonPlates[i].gameObject.SetActive(i == currentButtonPlateIndex);
         }
     }
 
-    private void CreateButtonPlate(Transform parent, List<Button> correctAnswers, List<Button> incorrectAnswers)
+    private void InitializeButtons(Transform buttonPlate, Transform[] buttons)
     {
-        List<Button> buttons = new List<Button>();
-        buttons.AddRange(correctAnswers);
-        buttons.AddRange(incorrectAnswers);
-        buttons.Shuffle();
-
-        for (int i = 0; i < parent.childCount; i++)
+        // Iterate over each button in the button plate
+        for (int i = 0; i < buttonPlate.childCount; i++)
         {
-            Button button = parent.GetChild(i).GetComponent<Button>();
-            Button newButton = buttons[i];
-            newButton.transform.SetParent(button.transform.parent, false);
-            newButton.gameObject.SetActive(true);
-            newButton.onClick.AddListener(() =>
-            {
-                if (correctAnswers.Contains(newButton))
-                {
-                    OnCorrectAnswer(newButton);
-                }
-                else
-                {
-                    OnIncorrectAnswer(newButton);
-                }
-            });
+            // Assign the button transforms to the array
+            buttons[i] = buttonPlate.GetChild(i);
+            // Add a click event listener to each button
+            int buttonIndex = i; // Store the current index to avoid closure issues
+            buttons[i].GetComponent<Button>().onClick.AddListener(() => WhenButtonClicked(buttonIndex));
         }
     }
 
-    private void OnCorrectAnswer(Button button)
+    public void WhenButtonClicked(int buttonIndex)
     {
-        button.image.color = Color.green; // Change color of the button to green
-        Debug.Log("Correct answer!");
-        // Add your action for correct answer here
-    }
+        // Toggle to the next button plate
+        currentButtonPlateIndex = (currentButtonPlateIndex + 1) % buttonPlates.Length;
 
-    private void OnIncorrectAnswer(Button button)
-    {
-        button.image.color = Color.red; // Change color of the button to red
-        Debug.Log("Incorrect answer!");
-        // Add your action for incorrect answer here
-    }
-}
+        // Initialize buttons on the new button plate
+        InitializeButtons(buttonPlates[currentButtonPlateIndex], correctButtons);
+        InitializeButtons(buttonPlates[currentButtonPlateIndex], incorrectButtons);
 
-// Extension method to shuffle a list
-public static class IListExtensions
-{
-    public static void Shuffle<T>(this IList<T> list)
-    {
-        int n = list.Count;
-        while (n > 1)
+        // Activate the current button plate and deactivate others
+        for (int i = 0; i < buttonPlates.Length; i++)
         {
-            n--;
-            int k = Random.Range(0, n + 1);
-            T value = list[k];
-            list[k] = list[n];
-            list[n] = value;
+            buttonPlates[i].gameObject.SetActive(i == currentButtonPlateIndex);
+        }
+
+        // Check if the clicked button is the correct answer
+        if (buttonIndex == 0)
+        {
+            Debug.Log("Correct answer!");
+            // Change the color of the correct button
+            correctButtons[buttonIndex].GetComponent<Image>().color = Color.green;
+        }
+        else
+        {
+            Debug.Log("Wrong answer!");
+            // Change the color of the wrong button
+            incorrectButtons[buttonIndex].GetComponent<Image>().color = Color.red;
+        }
+
+        // Disable all buttons to prevent further clicks
+        foreach (Transform button in correctButtons)
+        {
+            button.GetComponent<Button>().interactable = false;
+        }
+        foreach (Transform button in incorrectButtons)
+        {
+            button.GetComponent<Button>().interactable = false;
         }
     }
 }

@@ -410,6 +410,11 @@
 "Assets/Planet Earth Free/SpellingGame.cs"
 "Assets/Planet Earth Free/SpinFree.cs"
 "Assets/Planet Earth Free/SpinFree_1.cs"
+"Assets/Planet Earth Free/Tutorial_ButtonPanelSwitcher.cs"
+"Assets/Planet Earth Free/Tutorial_MoveToGetNextPanel.cs"
+"Assets/Planet Earth Free/Tutorial_PanelController.cs"
+"Assets/Planet Earth Free/Tutorial_PanelHover.cs"
+"Assets/Planet Earth Free/Tutorial_ToggleBetweenTs.cs"
 -langversion:9.0
 
 /deterministic
